@@ -1,0 +1,61 @@
+{
+  "name": "realtime-notification-service",
+  "version": "1.0.0",
+  "description": "A production-ready real-time notification service with WebSockets, multi-channel delivery, templating, scheduling, and analytics",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage --verbose",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/ tests/",
+    "lint:fix": "eslint src/ tests/ --fix",
+    "simulate": "node simulate_commits.js"
+  },
+  "keywords": [
+    "notifications",
+    "websocket",
+    "real-time",
+    "socket.io",
+    "pub-sub",
+    "microservice",
+    "nodejs",
+    "redis"
+  ],
+  "author": "Mani <myfamily9006@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.0",
+    "joi": "^17.9.2",
+    "express-rate-limit": "^6.10.0",
+    "winston": "^3.10.0",
+    "node-cron": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "supertest": "^6.3.3",
+    "socket.io-client": "^4.7.2",
+    "nodemon": "^3.0.1",
+    "eslint": "^8.47.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js"
+    ],
+    "testMatch": [
+      "**/tests/**/test_*.[jt]s?(x)",
+      "**/?(*.)+(test|spec).[jt]s?(x)",
+      "**/__tests__/**/*.[jt]s?(x)"
+    ]
+  }
+}
