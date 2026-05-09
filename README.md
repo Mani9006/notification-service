@@ -376,6 +376,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <!-- showcase:start -->
 
+## Research Report
+
+**Multi-Channel Notification Delivery with Subscriber Routing**
+
+_An evaluation of WebSocket, push, email, and SMS channels under burst load and failure injection_
+
+A self-contained research-grade report (Abstract, Introduction, Research Problem, Research Questions, Literature Review, Research Method, Data Description, Analysis, Discussion, Conclusion, Future Work, References) is published with this repository.
+
+[Read the full report (PDF)](docs/research_report.pdf)
+
+**Keywords:** notifications, publish-subscribe, multi-channel, back-pressure, fan-out
+
+![Research metrics](docs/research_metrics.png)
+
 ## Architecture
 
 ```mermaid
