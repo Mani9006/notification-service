@@ -371,3 +371,38 @@ curl http://localhost:3000/api/analytics/dashboard \
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<!-- showcase:start -->
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Pub[Publishers] -->|Pub/Sub| Bus[Event Bus]
+    Bus --> Channels{Channels}
+    Channels --> WS[WebSocket]
+    Channels --> Email[Email]
+    Channels --> Push[Push]
+    WS --> Clients[Subscribed Clients]
+    Bus --> Persist[(Delivery Log)]
+```
+
+## Test Results
+
+![Test results](docs/test_results.png)
+
+**113 passing**, **1 failing**, **0 skipped** (total 114, framework: Jest)
+
+## References & Further Reading
+
+- Eugster, P. T. et al. (2003). *The many faces of publish/subscribe.* ACM Computing Surveys 35(2). [↗](https://dl.acm.org/doi/10.1145/857076.857078)
+
+## Author
+
+**Manikanta Reddy Mandadhi** — Senior Data Scientist (RAG / Agentic AI)
+
+GitHub: [@Mani9006](https://github.com/Mani9006/notification-service) · LinkedIn: [reddy1999](https://www.linkedin.com/in/reddy1999) · Portfolio: [manikantabio.com](https://www.manikantabio.com)
+
+<!-- showcase:end -->
